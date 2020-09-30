@@ -3,45 +3,53 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
       title: 'Contador',
-      home: Column(
-        mainAxisAlignment: MainAxisAlignment.center, //alinhamento da coluna (vertical)
+      home: Stack(
         children: <Widget>[
-          Text(
-            'Pessoas: 0',
-            style: TextStyle(
-              color: Colors.white, 
-              fontWeight: FontWeight.bold),
+          Image.asset('images/restaurant.jpg',
+            fit: BoxFit.cover,
+            height: 1000.0,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center, //alinhamento da coluna (vertical)
             children: <Widget>[
-              Padding(padding: EdgeInsets.all(10.0),
-              child: 
-                FlatButton(
+              Text(
+                'Pessoas: 0',
+                style: TextStyle(
+                  color: Colors.white, 
+                  fontWeight: FontWeight.bold),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Padding(padding: EdgeInsets.all(10.0),
                   child: 
-                    Text('+1',
-                    style: TextStyle(color: Colors.white, fontSize: 40.0),),
-                    onPressed: () {},
-                    )
-              ,),
-              Padding(padding: EdgeInsets.all(10.0),
-              child: 
-                FlatButton(
+                    FlatButton(
+                      child: 
+                        Text('+1',
+                        style: TextStyle(color: Colors.white, fontSize: 40.0),),
+                        onPressed: () {},
+                        )
+                  ,),
+                  Padding(padding: EdgeInsets.all(10.0),
                   child: 
-                    Text('-1',
-                    style: TextStyle(color: Colors.white, fontSize: 40.0),),
-                    onPressed: () {}
-                    ,)
-              ,),
+                    FlatButton(
+                      child: 
+                        Text('-1',
+                        style: TextStyle(color: Colors.white, fontSize: 40.0),),
+                        onPressed: () {}
+                        ,)
+                  ,),
+                ],
+              ),
+              Text(
+                'pode entrar',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30.0,
+                  fontStyle: FontStyle.italic),
+              )
             ],
-          ),
-          Text(
-            'pode entrar',
-            style: TextStyle(
-                color: Colors.pinkAccent,
-                fontSize: 30.0,
-                fontStyle: FontStyle.italic),
           )
-        ],
-      )));
+        ],)
+      ));
 }
