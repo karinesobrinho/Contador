@@ -15,17 +15,24 @@ void main() {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              FlatButton(
-                child: 
-                Text('+1', 
-                  style: TextStyle( color: Colors.white, fontSize: 40.0)),
-                  onPressed: (){},),
-              FlatButton(
-                child: 
-                  Text('-1',
-                    style: TextStyle(color: Colors.white, fontSize: 40.0),), 
+              Padding(padding: EdgeInsets.all(10.0),
+              child: 
+                FlatButton(
+                  child: 
+                    Text('+1',
+                    style: TextStyle(color: Colors.white, fontSize: 40.0),),
                     onPressed: () {},
-              ),
+                    )
+              ,),
+              Padding(padding: EdgeInsets.all(10.0),
+              child: 
+                FlatButton(
+                  child: 
+                    Text('-1',
+                    style: TextStyle(color: Colors.white, fontSize: 40.0),),
+                    onPressed: () {}
+                    ,)
+              ,),
             ],
           ),
           Text(
